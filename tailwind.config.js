@@ -6,6 +6,25 @@ export default {
   darkmode:false,
   theme: {
     extend: {
+     
+        keyframes:{
+          'fade-in-down':{
+            "from":{
+                transform: "translateY(-0.75rem)",
+                opacity:"0"
+            },
+            "to":{
+                transform: "translateY(0rem)",
+                opacity:'1',
+            },
+          },
+        },
+        animation:{
+          'fade-in-down':"fade-in-down 5.0s ease-in-out both",
+          'animate-bounce':"fade-in-down 5.0 ease-in-out both"
+          
+        }
+      ,
       colors:{
          'body':'#17171F',//'the background color of our page'//
          'selected-text':'#A3A3FF',

@@ -7,7 +7,8 @@
     flex px-8
     md:px-14
     lg:px-24
-    w-full">
+    w-full
+    opacity-0 animate-fade-in-down">
 
   <!--nav menu section-->
 

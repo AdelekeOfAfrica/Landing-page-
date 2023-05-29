@@ -1,5 +1,5 @@
 <template>
-    <div class="container mt-60 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+    <div class="container mt-60 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full opacity-0 animate-fade-in-down">
     <section class="w-full">
         <h2 id="work" class="secondary-title">Our Works </h2>
         <p class="section-paragraph">We have had the oppurtunity of working with multiple organizations</p>
@@ -18,4 +18,5 @@
 </template>
 
 <script setup>
+
 </script>
