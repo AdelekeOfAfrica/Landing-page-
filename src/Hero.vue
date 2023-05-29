@@ -18,15 +18,15 @@
                         <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Home</span>
                     </a>
 
-                    <a  href="#" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
+                    <a  href="#work" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
                         <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Works</span>
                     </a>
 
-                    <a  href="#" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
+                    <a  href="#clients" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
                         <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Client</span>
                     </a>
 
-                    <a  href="#" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
+                    <a  href="#hire" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
                         <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Hire</span>
                     </a>
                 </div>
@@ -55,4 +55,21 @@
 </template>
 
 <script setup>
+function updateList() {
+    const titles = [...document.querySelectorAll('h1, h2')].sort((a, b) => {
+  return Math.abs(a.getBoundingClientRect().top) - Math.abs(b.getBoundingClientRect().top);
+});
+
+document.querySelectorAll(".selected-circle").forEach(c => c.classList.remove("selected-circle"));
+
+const navDots = document.querySelectorAll(".nav-dot");
+const selectedIndex = [...document.querySelectorAll('h1, h2')].indexOf(titles[0]);
+if (selectedIndex >= 0 && selectedIndex < navDots.length) {
+  navDots[selectedIndex].classList.add("selected-circle");
+}
+}
+updateList();
+window.addEventListener('scroll', () => {
+    updateList();
+})
 </script>

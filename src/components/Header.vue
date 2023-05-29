@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
      items-center" >
         <a href="#" class="text-selected-text">Home</a>
         <a href="#work">Our works </a>
-        <a href="#client">Clients</a>
+        <a href="#clients">Clients</a>
         <a href="#hire">
             <button class="
             px-6
